@@ -1,0 +1,16 @@
+{% extends 'movies/navbar.html' %}
+
+<body>
+    {% block content %}
+    <h1>This is my About Page!!</h1>
+    {% if movies %}
+        <ol type="1">
+            {% for movie in movies %}
+                <li>{{ movie|title }}</li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <p>No Movies</p>
+    {% endif %}
+    {% endblock %}
+</body>
